@@ -176,7 +176,7 @@ data "azurerm_resource_group" "storageRG" {
 
 locals {
   unique             = "${substr(sha1("${data.azurerm_resource_group.storageRG.id}"), 0, 8)}"
-  witnessStorageName = "${lower("${var.name_prefix}${local.unique}cw")}"
+  witnessStorageName = "${lower("${var.name_prefix}s2d${local.unique}cw")}"
 }
 
 
